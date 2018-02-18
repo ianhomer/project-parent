@@ -12,6 +12,10 @@
   <artifactId>project-example</artifactId>
   <name>Project Example</name>
 
+  <properties>
+    <purplepip.argLine.extra>-Dexample.property=value1</purplepip.argLine.extra>
+  </properties>
+
   <build>
     <plugins>
       <plugin>

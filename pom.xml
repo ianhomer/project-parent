@@ -43,11 +43,16 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+    <!-- Child projects can set purplepip.argLine.extra to append to the argLine -->
+    <purplepip.argLine.extra/>
     <purplepip.log.file>logback.xml</purplepip.log.file>
-    <purplepip.log.jvm>-Dlogback.configurationFile=${purplepip.log.file} -Dlogback.debug=true</purplepip.log.jvm>
+    <logback.debug>true</logback.debug>
+    <purplepip.argLine>-Dlogback.configurationFile=${purplepip.log.file} -Dlogback.debug=${logback.debug} ${purplepip.argLine.extra}</purplepip.argLine>
 
+    <!-- Java version -->
     <java.version>1.8</java.version>
 
+    <!-- Library versions -->
     <antlr.version>4.7.1</antlr.version>
     <assertj.version>3.8.0</assertj.version>
     <guava.version>23.6-jre</guava.version>
@@ -312,7 +317,7 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <configuration>
-          <argLine>@{jacoco.argLine} ${purplepip.log.jvm}</argLine>
+          <argLine>@{jacoco.argLine} ${purplepip.argLine}</argLine>
           <trimStackTrace>false</trimStackTrace>
         </configuration>
       </plugin>

@@ -28,4 +28,10 @@ public class ExampleTest {
     example.run();
     assertEquals("test", new Example("test").getName());
   }
+
+  @Test
+  public void testArgument() {
+    Example example = new Example("test");
+    assertEquals("value1", example.getSystemProperty());
+  }
 }

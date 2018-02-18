@@ -20,23 +20,34 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class Example {
   private String name;
+  private String systemProperty;
 
   public static void main(String[] args)  {
     new Example("main").run();
   }
 
+  /**
+   * Instantiate an Example object.
+   *
+   * @param name name of example object
+   */
   public Example(String name) {
     LOG.debug("Creating validation");
     this.name = name;
+    systemProperty = System.getProperty("example.property", "not-set");
   }
 
   public String getName() {
     return name;
   }
 
+  public String getSystemProperty() {
+    return systemProperty;
+  }
+
   void run() {
     LOG.info("Example run : {}", name);
-    LOG.debug("Debug message");
+    LOG.debug("Example system property : {}", systemProperty);
     LOG.trace("Trace message");
   }
 }
