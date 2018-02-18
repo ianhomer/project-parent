@@ -424,6 +424,7 @@
         </plugins>
       </build>
     </profile>
+    <!-- JDK 9 tweaks -->
     <profile>
       <id>jdk9</id>
       <activation>
@@ -453,12 +454,17 @@
         </pluginManagement>
       </build>
     </profile>
+    <!-- Execute with info logging -->
     <profile>
       <id>info</id>
       <properties>
         <purplepip.log.file>logback.xml</purplepip.log.file>
       </properties>
     </profile>
+    <!--
+        Execute with debug logging, note that this profile is enabled by default if
+        a specific test to run is specified.
+     -->
     <profile>
       <id>debug</id>
       <activation>
@@ -470,6 +476,7 @@
         <purplepip.log.file>logback-debug.xml</purplepip.log.file>
       </properties>
     </profile>
+    <!-- Execute with trace logging -->
     <profile>
       <id>trace</id>
       <properties>
