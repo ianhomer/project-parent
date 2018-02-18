@@ -530,6 +530,7 @@
         </plugins>
       </build>
     </profile>
+    <!-- Build artifacts quickly without testing -->
     <profile>
       <id>quick</id>
       <build>
