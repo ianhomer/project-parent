@@ -7,8 +7,8 @@
     <version>1.0.7-SNAPSHOT</version>
   </parent>
 
-  <artifactId>project-example</artifactId>
-  <name>Project Example</name>
+  <artifactId>project-parent-test</artifactId>
+  <name>Project Parent Test</name>
 
   <properties>
     <purplepip.argLine.extra>-Dexample.property=value1</purplepip.argLine.extra>

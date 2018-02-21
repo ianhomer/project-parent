@@ -7,11 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="project-example" />
+        <module name="project-parent-test" />
         <module name="project-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="project-example" target="1.8" />
+      <module name="project-parent" target="1.8" />
+      <module name="project-parent-test" target="1.8" />
       <module name="project-test" target="1.8" />
       <module name="purplepip-project" target="1.8" />
     </bytecodeTargetLevel>

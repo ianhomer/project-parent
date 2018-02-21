@@ -12,7 +12,7 @@
   <url>http://purplepip.com</url>
 
   <modules>
-    <module>project-example</module>
+    <module>project-parent-test</module>
   </modules>
 
   <organization>
@@ -203,7 +203,12 @@
               <artifactId>checkstyle</artifactId>
               <version>8.5</version>
             </dependency>
-          </dependencies>
+              <dependency>
+                <groupId>com.purplepip</groupId>
+                <artifactId>checkstyle</artifactId>
+                <version>1.0.1</version>
+              </dependency>
+            </dependencies>
         </plugin>
         <plugin>
           <groupId>org.antlr</groupId>
@@ -277,7 +282,7 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
         <configuration>
-          <configLocation>checkstyle.xml</configLocation>
+          <configLocation>purplepip_checkstyle.xml</configLocation>
           <enableRulesSummary>true</enableRulesSummary>
           <failOnViolation>true</failOnViolation>
           <failsOnError>true</failsOnError>
@@ -408,6 +413,19 @@
       <url>packagecloud+https://packagecloud.io/purplepip/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>purplepip-releases</id>
+      <url>https://packagecloud.io/purplepip/releases/maven2</url>
+    </pluginRepository>
+  </pluginRepositories>
+  <repositories>
+    <repository>
+      <id>purplepip-releases</id>
+      <url>https://packagecloud.io/purplepip/releases/maven2</url>
+    </repository>
+  </repositories>
 
   <profiles>
     <profile>

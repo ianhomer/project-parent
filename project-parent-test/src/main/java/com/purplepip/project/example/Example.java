@@ -18,9 +18,9 @@ package com.purplepip.project.example;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class Example {
-  private String name;
-  private String systemProperty;
+class Example {
+  private final String name;
+  private final String systemProperty;
 
   public static void main(String[] args)  {
     new Example("main").run();
@@ -31,7 +31,7 @@ public class Example {
    *
    * @param name name of example object
    */
-  public Example(String name) {
+  Example(String name) {
     LOG.debug("Creating validation");
     this.name = name;
     systemProperty = System.getProperty("example.property", "not-set");
