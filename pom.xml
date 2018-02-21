@@ -3,12 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.purplepip</groupId>
-  <artifactId>project</artifactId>
+  <artifactId>project-parent</artifactId>
   <version>1.0.4-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>PurplePip Project</name>
-  <description>PurplePip parent project pom</description>
+  <name>PurplePip Project Parent</name>
+  <description>PurplePip parent project parent pom</description>
   <url>http://purplepip.com</url>
 
   <modules>
