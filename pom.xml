@@ -192,6 +192,9 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
           <version>2.5.3</version>
+          <configuration>
+            <tagNameFormat>@{project.version}</tagNameFormat>
+          </configuration>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -401,11 +404,11 @@
   <distributionManagement>
     <repository>
       <id>packagecloud-purplepip</id>
-      <url>packagecloud+https://packagecloud.io/purplepip/purplepip-project</url>
+      <url>packagecloud+https://packagecloud.io/purplepip/releases</url>
     </repository>
     <snapshotRepository>
       <id>packagecloud-purplepip</id>
-      <url>packagecloud+https://packagecloud.io/purplepip/purplepip-project</url>
+      <url>packagecloud+https://packagecloud.io/purplepip/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
 
