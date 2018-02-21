@@ -387,6 +387,17 @@
     </plugins>
   </reporting>
 
+  <distributionManagement>
+    <repository>
+      <id>packagecloud-purplepip</id>
+      <url>packagecloud+https://packagecloud.io/purplepip/purplepip-project</url>
+    </repository>
+    <snapshotRepository>
+      <id>packagecloud-purplepip</id>
+      <url>packagecloud+https://packagecloud.io/purplepip/purplepip-project</url>
+    </snapshotRepository>
+  </distributionManagement>
+
   <profiles>
     <profile>
       <id>kotlin</id>
