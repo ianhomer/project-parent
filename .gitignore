@@ -1,6 +1,10 @@
-.idea/workspace.xml
-target/
+# IDEA
 
+.idea/workspace.xml
+
+# Maven
+
+target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
