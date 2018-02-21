@@ -4,7 +4,7 @@
   <parent>
     <artifactId>project</artifactId>
     <groupId>com.purplepip</groupId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
   </parent>
 
   <artifactId>project-example</artifactId>
