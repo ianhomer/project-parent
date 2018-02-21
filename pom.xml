@@ -403,11 +403,11 @@
 
   <distributionManagement>
     <repository>
-      <id>packagecloud-purplepip</id>
+      <id>purplepip-releases</id>
       <url>packagecloud+https://packagecloud.io/purplepip/releases</url>
     </repository>
     <snapshotRepository>
-      <id>packagecloud-purplepip</id>
+      <id>purplepip-snapshots</id>
       <url>packagecloud+https://packagecloud.io/purplepip/snapshots</url>
     </snapshotRepository>
   </distributionManagement>
