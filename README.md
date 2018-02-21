@@ -1,3 +1,3 @@
 # purplepip-project
 
-Template project which is used to bootstrap other projects.
+Parent project which can used to bootstrap other projects.

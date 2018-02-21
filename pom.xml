@@ -7,8 +7,8 @@
   <version>1.0.6-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>PurplePip Project Parent</name>
-  <description>PurplePip parent project parent pom</description>
+  <name>PurplePip Parent pom</name>
+  <description>PurplePip parent pom</description>
   <url>http://purplepip.com</url>
 
   <modules>
