@@ -37,11 +37,11 @@ class Example {
     systemProperty = System.getProperty("example.property", "not-set");
   }
 
-  public String getName() {
+  String getName() {
     return name;
   }
 
-  public String getSystemProperty() {
+  String getSystemProperty() {
     return systemProperty;
   }
 
