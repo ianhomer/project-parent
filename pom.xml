@@ -45,7 +45,7 @@
     <purplepip.argLine>-Dlogback.configurationFile=${purplepip.log.file} -Dlogback.debug=${logback.debug} ${purplepip.argLine.extra}</purplepip.argLine>
 
     <!-- Java version -->
-    <java.version>1.8</java.version>
+    <java.version>11</java.version>
 
     <!-- Library versions -->
     <antlr.version>4.7.1</antlr.version>
@@ -269,7 +269,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.20.1</version>
+          <version>3.0.0-M4</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
