@@ -12,4 +12,3 @@ Release with
 
     git tag 1.0.x
     git push --tags
-    
