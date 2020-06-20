@@ -1,6 +1,10 @@
 # IDEA
-
 .idea/workspace.xml
+# Eclipse
+.project
+.factorypath
+.classpath
+.settings/
 
 # Maven
 
