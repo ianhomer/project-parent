@@ -4,7 +4,7 @@
 
   <groupId>com.purplepip</groupId>
   <artifactId>project-parent</artifactId>
-  <version>1.0.10</version>
+  <version>1.0.11-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>PurplePip Parent pom</name>

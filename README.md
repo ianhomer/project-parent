@@ -1,4 +1,4 @@
-# purplepip-project
+# project-parent
 
 Parent project which can used to bootstrap other projects.
 
