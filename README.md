@@ -8,6 +8,6 @@ Test with
 
     mvn install
 
-Release with
+Release (and let CI perform release by deploying off created tag)
 
     mvn release:prepare
