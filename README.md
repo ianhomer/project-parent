@@ -2,7 +2,7 @@
 
 Parent project which can used to bootstrap other projects.
 
-# Contributing
+## Contributing
 
 Test with
 
