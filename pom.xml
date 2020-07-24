@@ -4,7 +4,7 @@
 
   <groupId>com.purplepip</groupId>
   <artifactId>project-parent</artifactId>
-  <version>1.0.8-SNAPSHOT</version>
+  <version>1.0.13-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>PurplePip Parent pom</name>
@@ -45,22 +45,23 @@
     <purplepip.argLine>-Dlogback.configurationFile=${purplepip.log.file} -Dlogback.debug=${logback.debug} ${purplepip.argLine.extra}</purplepip.argLine>
 
     <!-- Java version -->
-    <java.version>1.8</java.version>
+    <java.version>11</java.version>
 
     <!-- Library versions -->
-    <antlr.version>4.7.1</antlr.version>
-    <assertj.version>3.8.0</assertj.version>
-    <guava.version>23.6-jre</guava.version>
+    <antlr.version>4.8-1</antlr.version>
+    <assertj.version>3.16.1</assertj.version>
+    <guava.version>29.0-jre</guava.version>
     <hamcrest.version>2.0.0.0</hamcrest.version>
-    <jacoco.version>0.8.0</jacoco.version>
+    <jacoco.version>0.8.5</jacoco.version>
     <jacoco.covered.ratio>0.75</jacoco.covered.ratio>
-    <junit.version>4.12</junit.version>
-    <kotlin.version>1.2.31</kotlin.version>
+    <junit.version>5.7.0-M1</junit.version>
+    <kotlin.version>1.3.72</kotlin.version>
     <logback.version>1.2.3</logback.version>
-    <lombok.version>1.16.20</lombok.version>
-    <metrics.version>4.0.0</metrics.version>
-    <mockito.version>2.13.0</mockito.version>
+    <lombok.version>1.18.12</lombok.version>
+    <metrics.version>4.1.10.1</metrics.version>
+    <mockito.version>3.3.3</mockito.version>
     <slf4j.version>1.7.25</slf4j.version>
+    <surefire.version>3.0.0-M5</surefire.version>
   </properties>
 
   <dependencyManagement>
@@ -86,8 +87,30 @@
         <version>${metrics.version}</version>
       </dependency>
       <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
+        <groupId>org.junit</groupId>
+        <artifactId>junit-bom</artifactId>
+        <version>${junit.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+       <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>${junit.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-migrationsupport</artifactId>
+        <version>${junit.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>${junit.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-params</artifactId>
         <version>${junit.version}</version>
       </dependency>
       <dependency>
@@ -139,8 +162,13 @@
       <artifactId>logback-classic</artifactId>
     </dependency>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -196,19 +224,14 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>2.17</version>
+          <version>3.1.1</version>
           <dependencies>
             <dependency>
               <groupId>com.puppycrawl.tools</groupId>
               <artifactId>checkstyle</artifactId>
-              <version>8.5</version>
+              <version>8.34</version>
             </dependency>
-              <dependency>
-                <groupId>com.purplepip</groupId>
-                <artifactId>checkstyle</artifactId>
-                <version>1.0.1</version>
-              </dependency>
-            </dependencies>
+          </dependencies>
         </plugin>
         <plugin>
           <groupId>org.antlr</groupId>
@@ -218,12 +241,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-clean-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>3.1.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.7.0</version>
+          <version>3.8.1</version>
           <dependencies>
             <dependency>
               <groupId>org.ow2.asm</groupId>
@@ -232,7 +255,7 @@
                   Recent version required to compile java 10.   We can probably drop this
                   explicit dependency when maven-compile-plugin upgrades come
                   -->
-              <version>6.1.1</version>
+              <version>8.0.1</version>
             </dependency>
           </dependencies>
         </plugin>
@@ -254,32 +277,32 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>3.0.2</version>
+          <version>3.2.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>2.9</version>
+          <version>3.1.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>3.0.2</version>
+          <version>3.1.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
-          <version>3.6</version>
+          <version>3.9.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.20.1</version>
+          <version>${surefire.version}</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>exec-maven-plugin</artifactId>
-          <version>1.6.0</version>
+          <version>3.0.0</version>
         </plugin>
         <plugin>
           <groupId>org.jacoco</groupId>
@@ -289,7 +312,7 @@
         <plugin>
           <groupId>org.sonarsource.scanner.maven</groupId>
           <artifactId>sonar-maven-plugin</artifactId>
-          <version>3.4.0.905</version>
+          <version>3.7.0.1746</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -298,14 +321,13 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
         <configuration>
-          <configLocation>purplepip_checkstyle.xml</configLocation>
+          <configLocation>google_checks.xml</configLocation>
           <enableRulesSummary>true</enableRulesSummary>
           <failOnViolation>true</failOnViolation>
           <failsOnError>true</failsOnError>
           <consoleOutput>true</consoleOutput>
           <logViolationsToConsole>true</logViolationsToConsole>
           <includeTestSourceDirectory>true</includeTestSourceDirectory>
-          <sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
         </configuration>
         <executions>
           <execution>
@@ -426,7 +448,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>2.10.4</version>
+        <version>3.2.0</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -434,6 +456,11 @@
         <configuration>
           <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>${surefire.version}</version>
       </plugin>
     </plugins>
   </reporting>
