@@ -50,7 +50,7 @@
     <!-- Library versions -->
     <antlr.version>4.8-1</antlr.version>
     <assertj.version>3.16.1</assertj.version>
-    <guava.version>29.0-jre</guava.version>
+    <guava.version>32.0.0-jre</guava.version>
     <hamcrest.version>2.0.0.0</hamcrest.version>
     <jacoco.version>0.8.5</jacoco.version>
     <jacoco.covered.ratio>0.75</jacoco.covered.ratio>
